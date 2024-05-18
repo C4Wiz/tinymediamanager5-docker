@@ -16,13 +16,13 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASS }}
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: .
           build-args: |
             TMM_VERSION=${{ github.event.inputs.tmmVersion }}
-          tags: dzhuang/tinymediamanager:v${{ github.event.inputs.tmmVersion }}
+          tags: c4wiz/tinymediamanager:v${{ github.event.inputs.tmmVersion }}
           push: true
