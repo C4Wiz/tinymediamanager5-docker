@@ -1,8 +1,5 @@
 # tinymediamanager5-docker
 
-
-![docker pulls](https://img.shields.io/docker/pulls/c4wiz/tinymediamanager.svg) ![docker stars](https://img.shields.io/docker/stars/c4wiz/tinymediamanager.svg)
-
 Latest versions:
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/c4wiz/tinymediamanager/latest-v5) ![docker size](https://img.shields.io/docker/image-size/c4wiz/tinymediamanager/latest-v5)
 
