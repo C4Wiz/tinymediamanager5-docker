@@ -17,6 +17,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASS }}
       - name: Pull and push image
         run: |
-          docker pull c4wiz/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }}
-          docker tag c4wiz/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }} ${{ secrets.DOCKER_USER }}/tinymediamanager:latest-v5
+          docker pull c4wiz/tinymediamanager:v${{ github.event.inputs.toBeTagAsLatestV5 }}
+          docker tag c4wiz/tinymediamanager:v${{ github.event.inputs.toBeTagAsLatestV5 }} ${{ secrets.DOCKER_USER }}/tinymediamanager:latest-v5
           docker push c4wiz/tinymediamanager:latest-v5
