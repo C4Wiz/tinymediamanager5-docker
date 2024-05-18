@@ -13,10 +13,10 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASS }}
       - name: Pull and push image
         run: |
-          docker pull dzhuang/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }}
-          docker tag dzhuang/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }} ${{ secrets.DOCKERHUB_USERNAME }}/tinymediamanager:latest-v5
-          docker push dzhuang/tinymediamanager:latest-v5
+          docker pull c4wiz/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }}
+          docker tag c4wiz/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }} ${{ secrets.DOCKER_USER }}/tinymediamanager:latest-v5
+          docker push c4wiz/tinymediamanager:latest-v5
